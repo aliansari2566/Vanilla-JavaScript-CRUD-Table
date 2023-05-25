@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <form action="" id="form" name="mytable">
+        <div class="row">
+            <div class="col-lg-4">
+                <label class="form-label" for="fname">First name:</label><br>
+                <input class="form-control" type="text" id="fname" name="firstname" placeholder="enter your firstname">
+            </div>
+            <br>
+            <div class="col-lg-4">
+                <label class="form-label" for="lname">Last name:</label><br>
+                <input class="form-control" type="text" id="lname" name="lastname" placeholder="enter yout last name">
+            </div>
+            <br>
+
+            <div class="col-lg-3">
+                <label class="form-label" for="age">Age:</label><br>
+                <input class="form-control" type="text" id="age" name="age" placeholder="enter yout age">
+            </div>
+            <div class="col-lg-1">
+                <button type="button" class="btn btn-success" onclick="add()">submit
+
+                </button>
+            </div>
+            <div style="display:none ;" class="alert alert-primary" id="submitalert" role="alert">
+                A simple primary alert—check it out!
+            </div>
+
+        </div>
+
+
+    </form>
+
+    <table id="mytable" class="table table-dark table-hover table-striped-columns table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Age</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr> -->
+
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Record update</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <label class="form-label" for="fname">First name:</label><br>
+                    <input class="form-control" type="text" id="ufname" name="firstname"
+                        placeholder="enter your firstname">
+                    <br>
+                    <label class="form-label" for="lname">Last name:</label><br>
+                    <input type="text" class="form-control" id="ulname" name="lastname"
+                        placeholder="enter yout last name">
+                    <br>
+                    <label class="form-label" for="age">Age:</label><br>
+                    <input type="text" class="form-control" id="uage" name="uage" placeholder="enter yout age">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="change()">Save changes
+
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
